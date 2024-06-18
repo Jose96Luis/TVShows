@@ -26,10 +26,10 @@
             </objects>
             <point key="canvasLocation" x="-1307" y="-232"/>
         </scene>
-        <!--Item 1-->
+        <!--TV Shows-->
         <scene sceneID="po9-CO-FaQ">
             <objects>
-                <viewController id="sQ9-Du-MUZ" customClass="TVShowsViewController" customModule="TVShows" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="TV Shows" id="sQ9-Du-MUZ" userLabel="TV Shows" customClass="TVShowsViewController" customModule="TVShows" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="T6v-27-jnL">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -38,7 +38,7 @@
                                 <rect key="frame" x="0.0" y="59" width="393" height="710"/>
                                 <subviews>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="fGm-UT-Irx">
-                                        <rect key="frame" x="0.0" y="0.0" width="393" height="710"/>
+                                        <rect key="frame" x="0.0" y="40.666666666666686" width="393" height="669.33333333333326"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ShowCell" id="PeK-nm-tjg" customClass="TVShowCell" customModule="TVShows" customModuleProvider="target">
@@ -50,44 +50,9 @@
                                                     <subviews>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dpu-Em-rbO">
                                                             <rect key="frame" x="20" y="0.0" width="353" height="150.33333333333334"/>
-                                                            <subviews>
-                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="square.and.arrow.up.badge.clock.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="BZf-vl-dTN">
-                                                                    <rect key="frame" x="11.999999999999993" y="11" width="123.33333333333331" height="128.66666666666666"/>
-                                                                    <constraints>
-                                                                        <constraint firstAttribute="width" constant="120" id="ZaQ-x8-iUr"/>
-                                                                    </constraints>
-                                                                </imageView>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AjU-h4-sMj">
-                                                                    <rect key="frame" x="144" y="65" width="197" height="21"/>
-                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                    <nil key="textColor"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
-                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GIc-uP-IEI">
-                                                                    <rect key="frame" x="266" y="103.33333333333333" width="75" height="34.999999999999986"/>
-                                                                    <constraints>
-                                                                        <constraint firstAttribute="height" constant="35" id="3u4-qC-OoQ"/>
-                                                                        <constraint firstAttribute="width" constant="75" id="yLq-tE-B6N"/>
-                                                                    </constraints>
-                                                                    <state key="normal" title="Button"/>
-                                                                    <buttonConfiguration key="configuration" style="tinted" title="Button"/>
-                                                                    <connections>
-                                                                        <action selector="favoriteTapped:" destination="PeK-nm-tjg" eventType="touchUpInside" id="Cqi-zr-5mX"/>
-                                                                    </connections>
-                                                                </button>
-                                                            </subviews>
                                                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="bottom" secondItem="GIc-uP-IEI" secondAttribute="bottom" constant="12" id="1lA-VC-mx7"/>
                                                                 <constraint firstAttribute="height" constant="150" id="42o-08-2Fq"/>
-                                                                <constraint firstAttribute="trailing" secondItem="GIc-uP-IEI" secondAttribute="trailing" constant="12" id="Ev7-Qv-IuE"/>
-                                                                <constraint firstAttribute="bottom" secondItem="AjU-h4-sMj" secondAttribute="bottom" constant="64.329999999999998" id="Ngw-x3-zV7"/>
-                                                                <constraint firstItem="BZf-vl-dTN" firstAttribute="leading" secondItem="Dpu-Em-rbO" secondAttribute="leading" constant="12" id="RdR-Cf-GTc"/>
-                                                                <constraint firstItem="BZf-vl-dTN" firstAttribute="top" secondItem="Dpu-Em-rbO" secondAttribute="top" constant="12" id="bMc-e4-Bdh"/>
-                                                                <constraint firstAttribute="trailing" secondItem="AjU-h4-sMj" secondAttribute="trailing" constant="12" id="dat-nx-Man"/>
-                                                                <constraint firstItem="AjU-h4-sMj" firstAttribute="leading" secondItem="BZf-vl-dTN" secondAttribute="trailing" constant="12" id="icF-FT-W6T"/>
-                                                                <constraint firstAttribute="bottom" secondItem="BZf-vl-dTN" secondAttribute="bottom" constant="12" id="m4T-Yr-cMk"/>
-                                                                <constraint firstItem="AjU-h4-sMj" firstAttribute="top" secondItem="Dpu-Em-rbO" secondAttribute="top" constant="65" id="pQh-Qz-AHy"/>
                                                             </constraints>
                                                         </view>
                                                     </subviews>
@@ -98,20 +63,24 @@
                                                         <constraint firstItem="Dpu-Em-rbO" firstAttribute="top" secondItem="nZm-Ct-ehJ" secondAttribute="top" id="dqf-AY-A2I"/>
                                                     </constraints>
                                                 </tableViewCellContentView>
-                                                <connections>
-                                                    <outlet property="favoriteButton" destination="GIc-uP-IEI" id="xy5-kG-ydm"/>
-                                                    <outlet property="nameLabel" destination="AjU-h4-sMj" id="bW5-H0-IH8"/>
-                                                    <outlet property="showImageView" destination="BZf-vl-dTN" id="Uat-d2-nJN"/>
-                                                </connections>
                                             </tableViewCell>
                                         </prototypes>
                                     </tableView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TV Shows" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yZA-1f-RTo">
+                                        <rect key="frame" x="12" y="12.000000000000002" width="369" height="28.666666666666671"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="fGm-UT-Irx" secondAttribute="trailing" id="MJq-Ng-t6t"/>
-                                    <constraint firstItem="fGm-UT-Irx" firstAttribute="leading" secondItem="Ukc-8t-8b2" secondAttribute="leading" id="Q4i-BM-uZe"/>
-                                    <constraint firstItem="fGm-UT-Irx" firstAttribute="top" secondItem="Ukc-8t-8b2" secondAttribute="top" id="c2e-GC-Fnk"/>
-                                    <constraint firstAttribute="bottom" secondItem="fGm-UT-Irx" secondAttribute="bottom" id="xdt-8w-RoL"/>
+                                    <constraint firstItem="yZA-1f-RTo" firstAttribute="top" secondItem="Ukc-8t-8b2" secondAttribute="top" constant="12" id="FGR-Gm-V8w"/>
+                                    <constraint firstAttribute="bottom" secondItem="fGm-UT-Irx" secondAttribute="bottom" id="HFF-XT-8v2"/>
+                                    <constraint firstAttribute="trailing" secondItem="yZA-1f-RTo" secondAttribute="trailing" constant="12" id="KYb-5K-EEH"/>
+                                    <constraint firstAttribute="trailing" secondItem="fGm-UT-Irx" secondAttribute="trailing" id="L1o-I9-pjB"/>
+                                    <constraint firstItem="fGm-UT-Irx" firstAttribute="leading" secondItem="Ukc-8t-8b2" secondAttribute="leading" id="Z4q-Mm-6k3"/>
+                                    <constraint firstItem="yZA-1f-RTo" firstAttribute="leading" secondItem="Ukc-8t-8b2" secondAttribute="leading" constant="12" id="gDP-nu-ONx"/>
+                                    <constraint firstItem="fGm-UT-Irx" firstAttribute="top" secondItem="yZA-1f-RTo" secondAttribute="bottom" id="wkj-Kw-Evf"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -124,7 +93,7 @@
                             <constraint firstItem="Ukc-8t-8b2" firstAttribute="leading" secondItem="e5p-Gv-pI9" secondAttribute="leading" id="fJU-8B-pPV"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="NDB-vY-Dfd"/>
+                    <tabBarItem key="tabBarItem" title="TV Shows" id="NDB-vY-Dfd" userLabel="TV Shows"/>
                     <connections>
                         <outlet property="tableView" destination="fGm-UT-Irx" id="1G5-BM-Gic"/>
                     </connections>
@@ -133,10 +102,10 @@
             </objects>
             <point key="canvasLocation" x="-5.343511450381679" y="-646.47887323943667"/>
         </scene>
-        <!--Item 2-->
+        <!--Favoritos-->
         <scene sceneID="Ww5-xf-t04">
             <objects>
-                <viewController id="DkV-vX-CRL" customClass="ShowDetailViewController" customModule="TVShows" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Favoritos" id="DkV-vX-CRL" userLabel="Favoritos" customClass="ShowDetailViewController" customModule="TVShows" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lod-MI-hFS">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -191,7 +160,7 @@
                             <constraint firstItem="4B1-1t-pu5" firstAttribute="trailing" secondItem="fZM-3e-UUY" secondAttribute="trailing" id="lMz-IO-vke"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="JeU-9S-jcV"/>
+                    <tabBarItem key="tabBarItem" title="Favoritos" id="JeU-9S-jcV"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NNG-QO-wdh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -199,7 +168,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="square.and.arrow.up.badge.clock.fill" catalog="system" width="126" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

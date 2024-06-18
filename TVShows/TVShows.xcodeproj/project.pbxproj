@@ -7,18 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		133CF60B2C22472900BF3BBF /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133CF60A2C22472900BF3BBF /* APIService.swift */; };
 		13F466232C221B23004C5E19 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F466222C221B23004C5E19 /* AppDelegate.swift */; };
 		13F466252C221B23004C5E19 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F466242C221B23004C5E19 /* SceneDelegate.swift */; };
 		13F466272C221B23004C5E19 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F466262C221B23004C5E19 /* ViewController.swift */; };
 		13F4662A2C221B23004C5E19 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 13F466292C221B23004C5E19 /* Base */; };
 		13F4662C2C221B24004C5E19 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13F4662B2C221B24004C5E19 /* Assets.xcassets */; };
 		13F4662F2C221B24004C5E19 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 13F4662E2C221B24004C5E19 /* Base */; };
-		13F466372C221F84004C5E19 /* TVShowsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F466362C221F84004C5E19 /* TVShowsVC.swift */; };
-		13F466392C221FAA004C5E19 /* FavoritesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F466382C221FAA004C5E19 /* FavoritesVC.swift */; };
 		13F4663B2C221FCC004C5E19 /* TVShowsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F4663A2C221FCC004C5E19 /* TVShowsViewController.swift */; };
+		13F4663F2C22265C004C5E19 /* ShowDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F4663E2C22265C004C5E19 /* ShowDetailViewController.swift */; };
+		13F466412C22272A004C5E19 /* TVShow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F466402C22272A004C5E19 /* TVShow.swift */; };
+		13F466432C222910004C5E19 /* TVShowCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13F466422C222910004C5E19 /* TVShowCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		133CF60A2C22472900BF3BBF /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		13F4661F2C221B23004C5E19 /* TVShows.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TVShows.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13F466222C221B23004C5E19 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		13F466242C221B23004C5E19 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -27,9 +30,10 @@
 		13F4662B2C221B24004C5E19 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		13F4662E2C221B24004C5E19 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		13F466302C221B24004C5E19 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		13F466362C221F84004C5E19 /* TVShowsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVShowsVC.swift; sourceTree = "<group>"; };
-		13F466382C221FAA004C5E19 /* FavoritesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesVC.swift; sourceTree = "<group>"; };
 		13F4663A2C221FCC004C5E19 /* TVShowsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVShowsViewController.swift; sourceTree = "<group>"; };
+		13F4663E2C22265C004C5E19 /* ShowDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowDetailViewController.swift; sourceTree = "<group>"; };
+		13F466402C22272A004C5E19 /* TVShow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVShow.swift; sourceTree = "<group>"; };
+		13F466422C222910004C5E19 /* TVShowCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TVShowCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +47,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		133CF6082C22467600BF3BBF /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				13F466282C221B23004C5E19 /* Main.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		133CF6092C2246F500BF3BBF /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				133CF60A2C22472900BF3BBF /* APIService.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
 		13F466162C221B23004C5E19 = {
 			isa = PBXGroup;
 			children = (
@@ -62,18 +82,52 @@
 		13F466212C221B23004C5E19 /* TVShows */ = {
 			isa = PBXGroup;
 			children = (
+				133CF6092C2246F500BF3BBF /* Networking */,
+				133CF6082C22467600BF3BBF /* Resources */,
+				13F466472C224639004C5E19 /* Utils */,
+				13F466462C22462D004C5E19 /* Views */,
+				13F466452C224623004C5E19 /* ViewControllers */,
+				13F466442C224618004C5E19 /* Models */,
 				13F466222C221B23004C5E19 /* AppDelegate.swift */,
 				13F466242C221B23004C5E19 /* SceneDelegate.swift */,
-				13F466262C221B23004C5E19 /* ViewController.swift */,
-				13F466282C221B23004C5E19 /* Main.storyboard */,
 				13F4662B2C221B24004C5E19 /* Assets.xcassets */,
 				13F4662D2C221B24004C5E19 /* LaunchScreen.storyboard */,
 				13F466302C221B24004C5E19 /* Info.plist */,
-				13F466362C221F84004C5E19 /* TVShowsVC.swift */,
-				13F466382C221FAA004C5E19 /* FavoritesVC.swift */,
-				13F4663A2C221FCC004C5E19 /* TVShowsViewController.swift */,
 			);
 			path = TVShows;
+			sourceTree = "<group>";
+		};
+		13F466442C224618004C5E19 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				13F466402C22272A004C5E19 /* TVShow.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		13F466452C224623004C5E19 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				13F466262C221B23004C5E19 /* ViewController.swift */,
+				13F4663A2C221FCC004C5E19 /* TVShowsViewController.swift */,
+				13F4663E2C22265C004C5E19 /* ShowDetailViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		13F466462C22462D004C5E19 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				13F466422C222910004C5E19 /* TVShowCell.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		13F466472C224639004C5E19 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,6 +190,7 @@
 			files = (
 				13F4662C2C221B24004C5E19 /* Assets.xcassets in Resources */,
 				13F4662F2C221B24004C5E19 /* Base in Resources */,
+				13F466432C222910004C5E19 /* TVShowCell.xib in Resources */,
 				13F4662A2C221B23004C5E19 /* Base in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -147,9 +202,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				13F466392C221FAA004C5E19 /* FavoritesVC.swift in Sources */,
 				13F466272C221B23004C5E19 /* ViewController.swift in Sources */,
-				13F466372C221F84004C5E19 /* TVShowsVC.swift in Sources */,
+				133CF60B2C22472900BF3BBF /* APIService.swift in Sources */,
+				13F466412C22272A004C5E19 /* TVShow.swift in Sources */,
+				13F4663F2C22265C004C5E19 /* ShowDetailViewController.swift in Sources */,
 				13F4663B2C221FCC004C5E19 /* TVShowsViewController.swift in Sources */,
 				13F466232C221B23004C5E19 /* AppDelegate.swift in Sources */,
 				13F466252C221B23004C5E19 /* SceneDelegate.swift in Sources */,
