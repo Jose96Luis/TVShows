@@ -13,6 +13,9 @@
 		13F4662A2C221B23004C5E19 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 13F466292C221B23004C5E19 /* Base */; };
 		13F4662C2C221B24004C5E19 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13F4662B2C221B24004C5E19 /* Assets.xcassets */; };
 		13F4662F2C221B24004C5E19 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 13F4662E2C221B24004C5E19 /* Base */; };
+		13F466372C221F84004C5E19 /* TVShowsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F466362C221F84004C5E19 /* TVShowsVC.swift */; };
+		13F466392C221FAA004C5E19 /* FavoritesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F466382C221FAA004C5E19 /* FavoritesVC.swift */; };
+		13F4663B2C221FCC004C5E19 /* TVShowsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F4663A2C221FCC004C5E19 /* TVShowsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		13F4662B2C221B24004C5E19 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		13F4662E2C221B24004C5E19 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		13F466302C221B24004C5E19 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		13F466362C221F84004C5E19 /* TVShowsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVShowsVC.swift; sourceTree = "<group>"; };
+		13F466382C221FAA004C5E19 /* FavoritesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesVC.swift; sourceTree = "<group>"; };
+		13F4663A2C221FCC004C5E19 /* TVShowsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVShowsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +69,9 @@
 				13F4662B2C221B24004C5E19 /* Assets.xcassets */,
 				13F4662D2C221B24004C5E19 /* LaunchScreen.storyboard */,
 				13F466302C221B24004C5E19 /* Info.plist */,
+				13F466362C221F84004C5E19 /* TVShowsVC.swift */,
+				13F466382C221FAA004C5E19 /* FavoritesVC.swift */,
+				13F4663A2C221FCC004C5E19 /* TVShowsViewController.swift */,
 			);
 			path = TVShows;
 			sourceTree = "<group>";
@@ -138,7 +147,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				13F466392C221FAA004C5E19 /* FavoritesVC.swift in Sources */,
 				13F466272C221B23004C5E19 /* ViewController.swift in Sources */,
+				13F466372C221F84004C5E19 /* TVShowsVC.swift in Sources */,
+				13F4663B2C221FCC004C5E19 /* TVShowsViewController.swift in Sources */,
 				13F466232C221B23004C5E19 /* AppDelegate.swift in Sources */,
 				13F466252C221B23004C5E19 /* SceneDelegate.swift in Sources */,
 			);
