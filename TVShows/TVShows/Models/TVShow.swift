@@ -8,10 +8,13 @@
 import Foundation
 
 struct TVShow: Codable {
+    let id: Int
     let name: String
+    let summary: String
     let image: Image
-
+    
     struct Image: Codable {
         let medium: String
+        let original: String
     }
 }

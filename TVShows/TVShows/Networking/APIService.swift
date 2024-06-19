@@ -35,4 +35,28 @@ class APIService {
             }
         }.resume()
     }
+    
+    func fetchShowDetails(showId: Int, completion: @escaping (Result<TVShow, Error>) -> Void) {
+        guard let url = URL(string: "https://api.tvmaze.com/shows/\(showId)") else {
+            completion(.failure(NSError(domain: "", code: -1, userInfo: [NSLocalizedDescriptionKey: "Invalid URL"])))
+            return
+        }
+        
+        URLSession.shared.dataTask(with: url) { (data, response, error) in
+            if let error = error {
+                completion(.failure(error))
+                return
+            }
+            guard let data = data else {
+                completion(.failure(NSError(domain: "", code: -1, userInfo: [NSLocalizedDescriptionKey: "No data"])))
+                return
+            }
+            do {
+                let show = try JSONDecoder().decode(TVShow.self, from: data)
+                completion(.success(show))
+            } catch {
+                completion(.failure(error))
+            }
+        }.resume()
+    }
 }

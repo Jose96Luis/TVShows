@@ -18,8 +18,8 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="sQ9-Du-MUZ" kind="relationship" relationship="viewControllers" id="eYf-xz-Pny"/>
-                        <segue destination="DkV-vX-CRL" kind="relationship" relationship="viewControllers" id="2N5-LC-Rhq"/>
+                        <segue destination="chB-Qo-Vgd" kind="relationship" relationship="viewControllers" id="eYf-xz-Pny"/>
+                        <segue destination="ZLl-Bc-WNt" kind="relationship" relationship="viewControllers" id="2N5-LC-Rhq"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zJL-SP-Pd7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -35,10 +35,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ukc-8t-8b2">
-                                <rect key="frame" x="0.0" y="59" width="393" height="710"/>
+                                <rect key="frame" x="0.0" y="103" width="393" height="666"/>
                                 <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TV Shows" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yZA-1f-RTo">
+                                        <rect key="frame" x="12" y="12.000000000000002" width="369" height="28.666666666666671"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="fGm-UT-Irx">
-                                        <rect key="frame" x="0.0" y="40.666666666666686" width="393" height="669.33333333333326"/>
+                                        <rect key="frame" x="0.0" y="40.666666666666686" width="393" height="625.33333333333326"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ShowCell" id="PeK-nm-tjg" customClass="TVShowCell" customModule="TVShows" customModuleProvider="target">
@@ -66,12 +72,6 @@
                                             </tableViewCell>
                                         </prototypes>
                                     </tableView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TV Shows" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yZA-1f-RTo">
-                                        <rect key="frame" x="12" y="12.000000000000002" width="369" height="28.666666666666671"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="yZA-1f-RTo" firstAttribute="top" secondItem="Ukc-8t-8b2" secondAttribute="top" constant="12" id="FGR-Gm-V8w"/>
@@ -93,28 +93,34 @@
                             <constraint firstItem="Ukc-8t-8b2" firstAttribute="leading" secondItem="e5p-Gv-pI9" secondAttribute="leading" id="fJU-8B-pPV"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="TV Shows" id="NDB-vY-Dfd" userLabel="TV Shows"/>
+                    <navigationItem key="navigationItem" id="ouP-pP-P3s"/>
                     <connections>
                         <outlet property="tableView" destination="fGm-UT-Irx" id="1G5-BM-Gic"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CVT-2T-Ash" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-5.343511450381679" y="-646.47887323943667"/>
+            <point key="canvasLocation" x="921.37404580152668" y="-646.47887323943667"/>
         </scene>
         <!--Favoritos-->
         <scene sceneID="Ww5-xf-t04">
             <objects>
-                <viewController title="Favoritos" id="DkV-vX-CRL" userLabel="Favoritos" customClass="ShowDetailViewController" customModule="TVShows" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Favoritos" id="DkV-vX-CRL" userLabel="Favoritos" customClass="FavoritesViewController" customModule="TVShows" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lod-MI-hFS">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fZM-3e-UUY">
-                                <rect key="frame" x="0.0" y="59" width="393" height="710"/>
+                                <rect key="frame" x="0.0" y="103" width="393" height="666"/>
                                 <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Favoritos" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2h3-32-Nvt">
+                                        <rect key="frame" x="12" y="12.000000000000002" width="369" height="27.666666666666671"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="78f-Su-sS3">
-                                        <rect key="frame" x="0.0" y="0.0" width="393" height="710"/>
+                                        <rect key="frame" x="0.0" y="39.666666666666686" width="393" height="626.33333333333326"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="S5H-Ph-t9Q">
@@ -145,8 +151,11 @@
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="78f-Su-sS3" firstAttribute="leading" secondItem="fZM-3e-UUY" secondAttribute="leading" id="EMZ-Xy-P2t"/>
+                                    <constraint firstAttribute="trailing" secondItem="2h3-32-Nvt" secondAttribute="trailing" constant="12" id="NVK-R4-L0i"/>
+                                    <constraint firstItem="78f-Su-sS3" firstAttribute="top" secondItem="2h3-32-Nvt" secondAttribute="bottom" id="UpW-ZN-eoe"/>
                                     <constraint firstAttribute="bottom" secondItem="78f-Su-sS3" secondAttribute="bottom" id="bE0-eI-8XS"/>
-                                    <constraint firstItem="78f-Su-sS3" firstAttribute="top" secondItem="fZM-3e-UUY" secondAttribute="top" id="oni-nB-ty2"/>
+                                    <constraint firstItem="2h3-32-Nvt" firstAttribute="leading" secondItem="fZM-3e-UUY" secondAttribute="leading" constant="12" id="i9v-ee-12V"/>
+                                    <constraint firstItem="2h3-32-Nvt" firstAttribute="top" secondItem="fZM-3e-UUY" secondAttribute="top" constant="12" id="tBY-eb-VRb"/>
                                     <constraint firstAttribute="trailing" secondItem="78f-Su-sS3" secondAttribute="trailing" id="wAl-tU-Cxh"/>
                                 </constraints>
                             </view>
@@ -160,9 +169,50 @@
                             <constraint firstItem="4B1-1t-pu5" firstAttribute="trailing" secondItem="fZM-3e-UUY" secondAttribute="trailing" id="lMz-IO-vke"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Favoritos" id="JeU-9S-jcV"/>
+                    <navigationItem key="navigationItem" id="bCc-5r-El9"/>
+                    <connections>
+                        <outlet property="tableView" destination="78f-Su-sS3" id="yEO-87-LsM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NNG-QO-wdh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="921.37404580152668" y="86.619718309859152"/>
+        </scene>
+        <!--TV Shows-->
+        <scene sceneID="EKu-QG-HWM">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="chB-Qo-Vgd" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="TV Shows" id="NDB-vY-Dfd" userLabel="TV Shows"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ehx-67-c8w">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="sQ9-Du-MUZ" kind="relationship" relationship="rootViewController" id="6uS-KM-j42"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vdM-Jh-kuO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-5.343511450381679" y="-646.47887323943667"/>
+        </scene>
+        <!--Favoritos-->
+        <scene sceneID="kKM-7R-uPv">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ZLl-Bc-WNt" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Favoritos" id="JeU-9S-jcV"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="lu5-NY-d74">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="DkV-vX-CRL" kind="relationship" relationship="rootViewController" id="tgR-v0-FGk"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ugS-Ya-ZWO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-5.343511450381679" y="86.619718309859152"/>
         </scene>
