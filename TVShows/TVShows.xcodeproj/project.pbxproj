@@ -7,26 +7,64 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		133CF60B2C22472900BF3BBF /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133CF60A2C22472900BF3BBF /* APIService.swift */; };
+		133CF6112C2252A100BF3BBF /* TVShowCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133CF6102C2252A100BF3BBF /* TVShowCell.swift */; };
+		133CF6132C2254FC00BF3BBF /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133CF6122C2254FC00BF3BBF /* FavoritesViewController.swift */; };
+		133CF6152C22555100BF3BBF /* TVShowsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133CF6142C22555100BF3BBF /* TVShowsManager.swift */; };
+		133CF6182C2268FF00BF3BBF /* ShowDetailViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 133CF6172C2268FF00BF3BBF /* ShowDetailViewController.storyboard */; };
+		133CF6202C22C25700BF3BBF /* TVShowsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133CF61F2C22C25700BF3BBF /* TVShowsTests.swift */; };
+		133CF62E2C22C89900BF3BBF /* FavoritesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133CF62B2C22C73F00BF3BBF /* FavoritesManager.swift */; };
 		13F466232C221B23004C5E19 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F466222C221B23004C5E19 /* AppDelegate.swift */; };
 		13F466252C221B23004C5E19 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F466242C221B23004C5E19 /* SceneDelegate.swift */; };
-		13F466272C221B23004C5E19 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F466262C221B23004C5E19 /* ViewController.swift */; };
 		13F4662A2C221B23004C5E19 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 13F466292C221B23004C5E19 /* Base */; };
 		13F4662C2C221B24004C5E19 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13F4662B2C221B24004C5E19 /* Assets.xcassets */; };
 		13F4662F2C221B24004C5E19 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 13F4662E2C221B24004C5E19 /* Base */; };
+		13F4663B2C221FCC004C5E19 /* TVShowsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F4663A2C221FCC004C5E19 /* TVShowsViewController.swift */; };
+		13F4663F2C22265C004C5E19 /* ShowDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F4663E2C22265C004C5E19 /* ShowDetailViewController.swift */; };
+		13F466412C22272A004C5E19 /* TVShow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F466402C22272A004C5E19 /* TVShow.swift */; };
+		13F466432C222910004C5E19 /* TVShowCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13F466422C222910004C5E19 /* TVShowCell.xib */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		133CF6212C22C25700BF3BBF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 13F466172C221B23004C5E19 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 13F4661E2C221B23004C5E19;
+			remoteInfo = TVShows;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		133CF60A2C22472900BF3BBF /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		133CF6102C2252A100BF3BBF /* TVShowCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVShowCell.swift; sourceTree = "<group>"; };
+		133CF6122C2254FC00BF3BBF /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
+		133CF6142C22555100BF3BBF /* TVShowsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVShowsManager.swift; sourceTree = "<group>"; };
+		133CF6172C2268FF00BF3BBF /* ShowDetailViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ShowDetailViewController.storyboard; sourceTree = "<group>"; };
+		133CF61D2C22C25700BF3BBF /* TVShowsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TVShowsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		133CF61F2C22C25700BF3BBF /* TVShowsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVShowsTests.swift; sourceTree = "<group>"; };
+		133CF62B2C22C73F00BF3BBF /* FavoritesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesManager.swift; sourceTree = "<group>"; };
 		13F4661F2C221B23004C5E19 /* TVShows.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TVShows.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13F466222C221B23004C5E19 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		13F466242C221B23004C5E19 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		13F466262C221B23004C5E19 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		13F466292C221B23004C5E19 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		13F4662B2C221B24004C5E19 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		13F4662E2C221B24004C5E19 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		13F466302C221B24004C5E19 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		13F4663A2C221FCC004C5E19 /* TVShowsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVShowsViewController.swift; sourceTree = "<group>"; };
+		13F4663E2C22265C004C5E19 /* ShowDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowDetailViewController.swift; sourceTree = "<group>"; };
+		13F466402C22272A004C5E19 /* TVShow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVShow.swift; sourceTree = "<group>"; };
+		13F466422C222910004C5E19 /* TVShowCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TVShowCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		133CF61A2C22C25700BF3BBF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		13F4661C2C221B23004C5E19 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -37,10 +75,45 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		133CF6092C2246F500BF3BBF /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				133CF60A2C22472900BF3BBF /* APIService.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		133CF6162C225A1500BF3BBF /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				133CF6102C2252A100BF3BBF /* TVShowCell.swift */,
+				13F466422C222910004C5E19 /* TVShowCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		133CF61E2C22C25700BF3BBF /* TVShowsTests */ = {
+			isa = PBXGroup;
+			children = (
+				133CF61F2C22C25700BF3BBF /* TVShowsTests.swift */,
+				133CF62F2C22C8E200BF3BBF /* Managers */,
+			);
+			path = TVShowsTests;
+			sourceTree = "<group>";
+		};
+		133CF62F2C22C8E200BF3BBF /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				133CF62B2C22C73F00BF3BBF /* FavoritesManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
 		13F466162C221B23004C5E19 = {
 			isa = PBXGroup;
 			children = (
 				13F466212C221B23004C5E19 /* TVShows */,
+				133CF61E2C22C25700BF3BBF /* TVShowsTests */,
 				13F466202C221B23004C5E19 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -49,6 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				13F4661F2C221B23004C5E19 /* TVShows.app */,
+				133CF61D2C22C25700BF3BBF /* TVShowsTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -56,10 +130,12 @@
 		13F466212C221B23004C5E19 /* TVShows */ = {
 			isa = PBXGroup;
 			children = (
+				133CF6092C2246F500BF3BBF /* Networking */,
+				13F466462C22462D004C5E19 /* Views */,
+				13F466452C224623004C5E19 /* ViewControllers */,
+				13F466442C224618004C5E19 /* Models */,
 				13F466222C221B23004C5E19 /* AppDelegate.swift */,
 				13F466242C221B23004C5E19 /* SceneDelegate.swift */,
-				13F466262C221B23004C5E19 /* ViewController.swift */,
-				13F466282C221B23004C5E19 /* Main.storyboard */,
 				13F4662B2C221B24004C5E19 /* Assets.xcassets */,
 				13F4662D2C221B24004C5E19 /* LaunchScreen.storyboard */,
 				13F466302C221B24004C5E19 /* Info.plist */,
@@ -67,9 +143,56 @@
 			path = TVShows;
 			sourceTree = "<group>";
 		};
+		13F466442C224618004C5E19 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				133CF6142C22555100BF3BBF /* TVShowsManager.swift */,
+				13F466402C22272A004C5E19 /* TVShow.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		13F466452C224623004C5E19 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				13F4663A2C221FCC004C5E19 /* TVShowsViewController.swift */,
+				13F4663E2C22265C004C5E19 /* ShowDetailViewController.swift */,
+				133CF6122C2254FC00BF3BBF /* FavoritesViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		13F466462C22462D004C5E19 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				133CF6162C225A1500BF3BBF /* Cells */,
+				13F466282C221B23004C5E19 /* Main.storyboard */,
+				133CF6172C2268FF00BF3BBF /* ShowDetailViewController.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		133CF61C2C22C25700BF3BBF /* TVShowsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 133CF6232C22C25700BF3BBF /* Build configuration list for PBXNativeTarget "TVShowsTests" */;
+			buildPhases = (
+				133CF6192C22C25700BF3BBF /* Sources */,
+				133CF61A2C22C25700BF3BBF /* Frameworks */,
+				133CF61B2C22C25700BF3BBF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				133CF6222C22C25700BF3BBF /* PBXTargetDependency */,
+			);
+			name = TVShowsTests;
+			productName = TVShowsTests;
+			productReference = 133CF61D2C22C25700BF3BBF /* TVShowsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		13F4661E2C221B23004C5E19 /* TVShows */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13F466332C221B24004C5E19 /* Build configuration list for PBXNativeTarget "TVShows" */;
@@ -97,6 +220,10 @@
 				LastSwiftUpdateCheck = 1540;
 				LastUpgradeCheck = 1540;
 				TargetAttributes = {
+					133CF61C2C22C25700BF3BBF = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = 13F4661E2C221B23004C5E19;
+					};
 					13F4661E2C221B23004C5E19 = {
 						CreatedOnToolsVersion = 15.4;
 					};
@@ -116,17 +243,27 @@
 			projectRoot = "";
 			targets = (
 				13F4661E2C221B23004C5E19 /* TVShows */,
+				133CF61C2C22C25700BF3BBF /* TVShowsTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		133CF61B2C22C25700BF3BBF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		13F4661D2C221B23004C5E19 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				13F4662C2C221B24004C5E19 /* Assets.xcassets in Resources */,
 				13F4662F2C221B24004C5E19 /* Base in Resources */,
+				13F466432C222910004C5E19 /* TVShowCell.xib in Resources */,
+				133CF6182C2268FF00BF3BBF /* ShowDetailViewController.storyboard in Resources */,
 				13F4662A2C221B23004C5E19 /* Base in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -134,17 +271,40 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		133CF6192C22C25700BF3BBF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				133CF6202C22C25700BF3BBF /* TVShowsTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		13F4661B2C221B23004C5E19 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				13F466272C221B23004C5E19 /* ViewController.swift in Sources */,
+				133CF6132C2254FC00BF3BBF /* FavoritesViewController.swift in Sources */,
+				133CF62E2C22C89900BF3BBF /* FavoritesManager.swift in Sources */,
+				133CF60B2C22472900BF3BBF /* APIService.swift in Sources */,
+				13F466412C22272A004C5E19 /* TVShow.swift in Sources */,
+				13F4663F2C22265C004C5E19 /* ShowDetailViewController.swift in Sources */,
+				13F4663B2C221FCC004C5E19 /* TVShowsViewController.swift in Sources */,
+				133CF6152C22555100BF3BBF /* TVShowsManager.swift in Sources */,
 				13F466232C221B23004C5E19 /* AppDelegate.swift in Sources */,
+				133CF6112C2252A100BF3BBF /* TVShowCell.swift in Sources */,
 				13F466252C221B23004C5E19 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		133CF6222C22C25700BF3BBF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 13F4661E2C221B23004C5E19 /* TVShows */;
+			targetProxy = 133CF6212C22C25700BF3BBF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		13F466282C221B23004C5E19 /* Main.storyboard */ = {
@@ -166,6 +326,42 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		133CF6242C22C25700BF3BBF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 96M69NK9FL;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = JLRR.TVShowsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TVShows.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/TVShows";
+			};
+			name = Debug;
+		};
+		133CF6252C22C25700BF3BBF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 96M69NK9FL;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = JLRR.TVShowsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TVShows.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/TVShows";
+			};
+			name = Release;
+		};
 		13F466312C221B24004C5E19 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -344,6 +540,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		133CF6232C22C25700BF3BBF /* Build configuration list for PBXNativeTarget "TVShowsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				133CF6242C22C25700BF3BBF /* Debug */,
+				133CF6252C22C25700BF3BBF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		13F4661A2C221B23004C5E19 /* Build configuration list for PBXProject "TVShows" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
