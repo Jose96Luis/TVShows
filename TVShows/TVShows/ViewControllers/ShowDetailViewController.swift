@@ -12,12 +12,17 @@ class ShowDetailViewController: UIViewController {
     var showId: Int?
     var show: TVShow?
     
+    
+    @IBOutlet weak var viewBaseDetail: UIView!
     @IBOutlet weak var showImageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var summaryLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        styleViewBase()
+        
         if let showId = showId {
             APIService.shared.fetchShowDetails(showId: showId) { result in
                 switch result {
@@ -33,6 +38,18 @@ class ShowDetailViewController: UIViewController {
         }
     }
     
+    private func styleViewBase() {
+        viewBaseDetail.layer.cornerRadius = 20.0
+        viewBaseDetail.layer.masksToBounds = false
+        viewBaseDetail.layer.shadowColor = UIColor.purple.cgColor
+        viewBaseDetail.layer.shadowOpacity = 0.2
+        viewBaseDetail.layer.shadowOffset = CGSize(width: 0, height: 2)
+        viewBaseDetail.layer.shadowRadius = 8.0
+        viewBaseDetail.layer.shadowPath = UIBezierPath(roundedRect: viewBaseDetail.bounds, cornerRadius: viewBaseDetail.layer.cornerRadius).cgPath
+        viewBaseDetail.layer.borderColor = UIColor.purple.cgColor
+        viewBaseDetail.layer.borderWidth = 2.0 
+    }
+
     func updateUI() {
         guard let show = show else { return }
         nameLabel.text = show.name
