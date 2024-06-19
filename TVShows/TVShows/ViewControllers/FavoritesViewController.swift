@@ -50,8 +50,6 @@ class FavoritesViewController: UIViewController, UITableViewDelegate, UITableVie
         let show = favoriteShows[indexPath.row]
         let isFavorite = favorites[show.name] ?? false
         cell.configure(with: show, isFavorite: isFavorite)
-        cell.favoriteButton.tag = indexPath.row
-        cell.favoriteButton.addTarget(self, action: #selector(favoriteButtonTapped(_:)), for: .touchUpInside)
         return cell
     }
     
@@ -74,6 +72,48 @@ class FavoritesViewController: UIViewController, UITableViewDelegate, UITableVie
             }
         } else {
             print("Error: No se pudo instanciar ShowDetailViewController")
+        }
+    }
+    
+    //Método para manejar las acciones de deslizar
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        if #available(iOS 13.0, *) {
+            let show = favoriteShows[indexPath.row]
+            
+            let deleteAction = UIContextualAction(style: .destructive, title: "Eliminar") { (action, view, completionHandler) in
+                self.favorites[show.name] = false
+                self.updateLocalStorage()
+                self.loadFavorites()
+                DispatchQueue.main.async {
+                    tableView.reloadData()
+                }
+                completionHandler(true)
+            }
+            
+            let configuration = UISwipeActionsConfiguration(actions: [deleteAction])
+            return configuration
+        } else {
+            return nil
+        }
+    }
+    
+    //Método para manejar las acciones de deslizar en iOS 10-12
+    func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        if #available(iOS 13.0, *) {
+            return nil
+        } else {
+            let show = favoriteShows[indexPath.row]
+            
+            let deleteAction = UITableViewRowAction(style: .destructive, title: "Eliminar") { (action, indexPath) in
+                self.favorites[show.name] = false
+                self.updateLocalStorage()
+                self.loadFavorites()
+                DispatchQueue.main.async {
+                    tableView.reloadData()
+                }
+            }
+            
+            return [deleteAction]
         }
     }
     

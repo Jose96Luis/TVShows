@@ -172,7 +172,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" name="AccentColor"/>
                         <textAttributes key="titleTextAttributes">
-                            <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
                             <color key="textColor" systemColor="systemBlueColor"/>
                         </textAttributes>
                         <navigationBarAppearance key="standardAppearance" backgroundEffect="regular">
@@ -202,7 +202,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" name="AccentColor"/>
                         <textAttributes key="titleTextAttributes">
-                            <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
                             <color key="textColor" systemColor="systemBlueColor"/>
                         </textAttributes>
                         <navigationBarAppearance key="standardAppearance" backgroundEffect="regular">

@@ -13,19 +13,12 @@ class TVShowCell: UITableViewCell {
     @IBOutlet weak var viewBase: UIView!
     @IBOutlet weak var showImageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var favoriteButton: UIButton!
-
-    var isFavorite: Bool = false {
-        didSet {
-            updateFavoriteButton()
-        }
-    }
+    @IBOutlet weak var favoriteIcon: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         styleViewBase()
         styleImageView()
-        styleBntFav()
 
     }
     
@@ -44,20 +37,15 @@ class TVShowCell: UITableViewCell {
     
     private func styleImageView() {
         showImageView.layer.cornerRadius = 20.0
-        showImageView.layer.borderWidth = 5.0
+        showImageView.layer.borderWidth = 1.0
         showImageView.layer.masksToBounds = true
         showImageView.layer.borderColor = UIColor.white.cgColor
-    }
-    
-    private func styleBntFav() {
-        showImageView.layer.cornerRadius = 20.0
-        
     }
 
     func configure(with show: TVShow, isFavorite: Bool) {
         nameLabel.text = show.name
-        self.isFavorite = isFavorite
-
+        favoriteIcon.image = UIImage(named: "star_filled")
+        favoriteIcon.isHidden = !isFavorite
         // Cargar la imagen de manera asincrónica
         if let url = URL(string: show.image.medium) {
             URLSession.shared.dataTask(with: url) { data, response, error in
@@ -68,27 +56,6 @@ class TVShowCell: UITableViewCell {
                 }
             }.resume()
         }
-
-        updateFavoriteButton()
-    }
-
-    private func updateFavoriteButton() {
-        if isFavorite {
-            favoriteButton.setTitle("Delete", for: .normal)
-            favoriteButton.backgroundColor = .red
-            favoriteButton.setTitleColor(.white, for: .normal)
-        } else {
-            favoriteButton.setTitle("Favorite", for: .normal)
-            favoriteButton.backgroundColor = .green
-            favoriteButton.setTitleColor(.white, for: .normal)
-        }
-    }
-
-    @IBAction func favoriteTapped(_ sender: UIButton) {
-        isFavorite.toggle()
-        updateFavoriteButton()
-        // Lógica para marcar o desmarcar como favorito
-        print("favoriteTapped")
     }
 }
 

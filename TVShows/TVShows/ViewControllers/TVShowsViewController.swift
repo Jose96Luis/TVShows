@@ -54,11 +54,9 @@ class TVShowsViewController: UIViewController, UITableViewDelegate, UITableViewD
         let show = shows[indexPath.row]
         let isFavorite = favorites[show.name] ?? false
         cell.configure(with: show, isFavorite: isFavorite)
-        cell.favoriteButton.tag = indexPath.row
-        cell.favoriteButton.addTarget(self, action: #selector(favoriteButtonTapped(_:)), for: .touchUpInside)
         return cell
     }
-    
+
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let show = shows[indexPath.row]
         navigateToShowDetail(with: show)
@@ -74,6 +72,60 @@ class TVShowsViewController: UIViewController, UITableViewDelegate, UITableViewD
         }
     }
     
+    //Método para manejar las acciones de deslizar
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        if #available(iOS 13.0, *) {
+            let show = shows[indexPath.row]
+            let isFavorite = favorites[show.name] ?? false
+            
+            let favoriteAction = UIContextualAction(style: .normal, title: isFavorite ? "Eliminar" : "Agregar") { (action, view, completionHandler) in
+                if isFavorite {
+                    self.favorites[show.name] = false
+                } else {
+                    self.favorites[show.name] = true
+                }
+                self.updateLocalStorage()
+                DispatchQueue.main.async {
+                    tableView.reloadRows(at: [indexPath], with: .automatic)
+                }
+                completionHandler(true)
+            }
+            
+            favoriteAction.backgroundColor = isFavorite ? .red : .green
+            
+            let configuration = UISwipeActionsConfiguration(actions: [favoriteAction])
+            return configuration
+        } else {
+            // Fallback on earlier versions
+            return nil
+        }
+    }
+    
+    //Método para manejar las acciones de deslizar en iOS 10-12
+    func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        if #available(iOS 13.0, *) {
+            return nil
+        } else {
+            let show = shows[indexPath.row]
+            let isFavorite = favorites[show.name] ?? false
+            
+            let favoriteAction = UITableViewRowAction(style: .normal, title: isFavorite ? "Eliminar" : "Agregar") { (action, indexPath) in
+                if isFavorite {
+                    self.favorites[show.name] = false
+                } else {
+                    self.favorites[show.name] = true
+                }
+                self.updateLocalStorage()
+                DispatchQueue.main.async {
+                    tableView.reloadRows(at: [indexPath], with: .automatic)
+                }
+            }
+            favoriteAction.backgroundColor = isFavorite ? .red : .green
+            
+            return [favoriteAction]
+        }
+    }
+
     @objc func favoriteButtonTapped(_ sender: UIButton) {
         let show = shows[sender.tag]
         let isFavorite = favorites[show.name] ?? false
