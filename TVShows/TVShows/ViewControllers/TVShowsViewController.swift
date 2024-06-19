@@ -13,7 +13,7 @@ class TVShowsViewController: UIViewController, UITableViewDelegate, UITableViewD
     @IBOutlet weak var tableView: UITableView!
     
     var shows: [TVShow] = []
-    var favorites: [String: Bool] = [:]
+    var favoritesManager = FavoritesManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,7 +22,6 @@ class TVShowsViewController: UIViewController, UITableViewDelegate, UITableViewD
         // Registrar la celda desde el archivo NIB
         let nib = UINib(nibName: "TVShowCell", bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: "ShowCell")
-        loadFavorites()
         loadShows()
         
         self.title = "TV Shows"
@@ -52,16 +51,15 @@ class TVShowsViewController: UIViewController, UITableViewDelegate, UITableViewD
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ShowCell", for: indexPath) as! TVShowCell
         let show = shows[indexPath.row]
-        let isFavorite = favorites[show.name] ?? false
+        let isFavorite = favoritesManager.isFavorite(show.name)
         cell.configure(with: show, isFavorite: isFavorite)
         return cell
     }
-
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let show = shows[indexPath.row]
         navigateToShowDetail(with: show)
         print("Navegando al detalle de la pelicula: \(show.name)")
-        
     }
     
     func navigateToShowDetail(with show: TVShow) {
@@ -76,15 +74,14 @@ class TVShowsViewController: UIViewController, UITableViewDelegate, UITableViewD
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         if #available(iOS 13.0, *) {
             let show = shows[indexPath.row]
-            let isFavorite = favorites[show.name] ?? false
+            let isFavorite = favoritesManager.isFavorite(show.name)
             
             let favoriteAction = UIContextualAction(style: .normal, title: isFavorite ? "Eliminar" : "Agregar") { (action, view, completionHandler) in
                 if isFavorite {
-                    self.favorites[show.name] = false
+                    self.favoritesManager.removeFavorite(show.name)
                 } else {
-                    self.favorites[show.name] = true
+                    self.favoritesManager.addFavorite(show.name)
                 }
-                self.updateLocalStorage()
                 DispatchQueue.main.async {
                     tableView.reloadRows(at: [indexPath], with: .automatic)
                 }
@@ -107,15 +104,14 @@ class TVShowsViewController: UIViewController, UITableViewDelegate, UITableViewD
             return nil
         } else {
             let show = shows[indexPath.row]
-            let isFavorite = favorites[show.name] ?? false
+            let isFavorite = favoritesManager.isFavorite(show.name)
             
             let favoriteAction = UITableViewRowAction(style: .normal, title: isFavorite ? "Eliminar" : "Agregar") { (action, indexPath) in
                 if isFavorite {
-                    self.favorites[show.name] = false
+                    self.favoritesManager.removeFavorite(show.name)
                 } else {
-                    self.favorites[show.name] = true
+                    self.favoritesManager.addFavorite(show.name)
                 }
-                self.updateLocalStorage()
                 DispatchQueue.main.async {
                     tableView.reloadRows(at: [indexPath], with: .automatic)
                 }
@@ -125,18 +121,17 @@ class TVShowsViewController: UIViewController, UITableViewDelegate, UITableViewD
             return [favoriteAction]
         }
     }
-
+    
     @objc func favoriteButtonTapped(_ sender: UIButton) {
         let show = shows[sender.tag]
-        let isFavorite = favorites[show.name] ?? false
+        let isFavorite = favoritesManager.isFavorite(show.name)
         let alert = UIAlertController(title: nil, message: nil, preferredStyle: .alert)
-        if isFavorite {
+        if (isFavorite) {
             alert.title = "Confirmación"
             alert.message = "¿Estás seguro de que quieres eliminar este show de tus favoritos?"
             alert.addAction(UIAlertAction(title: "Cancelar", style: .cancel, handler: nil))
             alert.addAction(UIAlertAction(title: "Eliminar", style: .destructive, handler: { _ in
-                self.favorites[show.name] = false
-                self.updateLocalStorage()
+                self.favoritesManager.removeFavorite(show.name)
                 DispatchQueue.main.async {
                     self.tableView.reloadData()
                 }
@@ -146,26 +141,13 @@ class TVShowsViewController: UIViewController, UITableViewDelegate, UITableViewD
             alert.message = "¿Quieres agregar este show a tus favoritos?"
             alert.addAction(UIAlertAction(title: "Cancelar", style: .cancel, handler: nil))
             alert.addAction(UIAlertAction(title: "Agregar", style: .default, handler: { _ in
-                self.favorites[show.name] = true
-                self.updateLocalStorage()
+                self.favoritesManager.addFavorite(show.name)
                 DispatchQueue.main.async {
                     self.tableView.reloadData()
                 }
             }))
         }
         present(alert, animated: true, completion: nil)
-    }
-    
-    func updateLocalStorage() {
-        // Actualizar el almacenamiento local con los favoritos
-        UserDefaults.standard.set(favorites, forKey: "favorites")
-    }
-    
-    func loadFavorites() {
-        // Cargar favoritos del almacenamiento local
-        if let savedFavorites = UserDefaults.standard.dictionary(forKey: "favorites") as? [String: Bool] {
-            favorites = savedFavorites
-        }
     }
     
     func showErrorAlert(message: String) {
