@@ -19,12 +19,13 @@ class FavoritesViewController: UIViewController, UITableViewDelegate, UITableVie
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
-        
         // Registrar la celda desde el archivo NIB
         let nib = UINib(nibName: "TVShowCell", bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: "ShowCell")
-        
         loadFavorites()
+        
+        self.title = "Favoritos"
+
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -78,7 +79,6 @@ class FavoritesViewController: UIViewController, UITableViewDelegate, UITableVie
     
     @objc func favoriteButtonTapped(_ sender: UIButton) {
         let show = favoriteShows[sender.tag]
-        let isFavorite = favorites[show.name] ?? false
         
         let alert = UIAlertController(title: "Confirmación", message: "¿Estás seguro de que quieres eliminar este show de tus favoritos?", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Cancelar", style: .cancel, handler: nil))
@@ -92,7 +92,7 @@ class FavoritesViewController: UIViewController, UITableViewDelegate, UITableVie
         }))
         present(alert, animated: true, completion: nil)
     }
-    
+
     func updateLocalStorage() {
         UserDefaults.standard.set(favorites, forKey: "favorites")
     }

@@ -19,13 +19,13 @@ class TVShowsViewController: UIViewController, UITableViewDelegate, UITableViewD
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
-        
         // Registrar la celda desde el archivo NIB
         let nib = UINib(nibName: "TVShowCell", bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: "ShowCell")
-        
         loadFavorites()
         loadShows()
+        
+        self.title = "TV Shows"
     }
     
     func loadShows() {

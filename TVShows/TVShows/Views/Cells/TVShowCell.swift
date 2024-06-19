@@ -10,6 +10,7 @@ import UIKit
 
 class TVShowCell: UITableViewCell {
     
+    @IBOutlet weak var viewBase: UIView!
     @IBOutlet weak var showImageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var favoriteButton: UIButton!
@@ -18,6 +19,39 @@ class TVShowCell: UITableViewCell {
         didSet {
             updateFavoriteButton()
         }
+    }
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        styleViewBase()
+        styleImageView()
+        styleBntFav()
+
+    }
+    
+    private func styleViewBase() {
+        viewBase.layer.cornerRadius = 20.0
+        viewBase.layer.masksToBounds = false
+        viewBase.layer.shadowColor = UIColor.purple.cgColor
+        viewBase.layer.shadowOpacity = 0.2
+        viewBase.layer.shadowOffset = CGSize(width: 0, height: 2)
+        viewBase.layer.shadowRadius = 8.0
+        viewBase.layer.shadowPath = UIBezierPath(roundedRect: viewBase.bounds, cornerRadius: viewBase.layer.cornerRadius).cgPath
+        
+        // Cambiar el color de fondo a morado
+        viewBase.backgroundColor = UIColor.purple
+    }
+    
+    private func styleImageView() {
+        showImageView.layer.cornerRadius = 20.0
+        showImageView.layer.borderWidth = 5.0
+        showImageView.layer.masksToBounds = true
+        showImageView.layer.borderColor = UIColor.white.cgColor
+    }
+    
+    private func styleBntFav() {
+        showImageView.layer.cornerRadius = 20.0
+        
     }
 
     func configure(with show: TVShow, isFavorite: Bool) {
